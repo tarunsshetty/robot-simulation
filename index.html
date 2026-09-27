@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Robot Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Autonomous Robot Navigation Simulator</h1>
+            <p>Click grid cells to draw obstacle walls, then run the pathfinding AI.</p>
+        </header>
+
+        <div class="controls">
+            <button id="start-btn" onclick="startPathfinding()">Start AI Pathfinding</button>
+            <button id="clear-btn" onclick="resetGrid()">Clear Grid</button>
+            <div class="status" id="status-text">Status: Ready</div>
+        </div>
+
+        <div id="grid-container" class="grid"></div>
+
+        <div class="legend">
+            <span><span class="box start"></span> Robot (Start)</span>
+            <span><span class="box end"></span> Target</span>
+            <span><span class="box wall"></span> Obstacle</span>
+            <span><span class="box visited"></span> AI Scanned</span>
+            <span><span class="box path"></span> Shortest Path</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
